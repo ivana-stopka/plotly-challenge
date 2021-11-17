@@ -16,35 +16,35 @@ function buildDemographics(id) {
     var panel = d3.select("#sample-metadata");
     panel.html("");
     Object.entries(result).forEach(([key,value]) => {
-      panel.append("h6").text(`${key}:${value}`);
+      panel.append("h6").text(`${key}: ${value}`);
     });
   });
-}
+};
 
 // Plots function
 
 // Initialisation function
 function init() {
-  var menu = d3.select("#selDataset");
+  var option = d3.select("#selDataset");
 
   d3.json("data/samples.json").then((data) => {
-    var sampleNumber = data.names;
-    sampleNumber.forEach((id) => {
-      menu
+    var idNumber = data.names;
+    idNumber.forEach((id) => {
+      option
         .append("option")
         .text(id)
         .property("value",id);
     });
 
-    const firstSampleNumber = sampleNumber[0];
-    buildDemographics(firstSampleNumber);
+    const firstIdNumber = idNumber[0];
+    buildDemographics(firstIdNumber);
   });
-}
+};
 
-// Menu Change function
-function menuChange(newSampleNumber) {
-  buildDemographics(newSampleNumber);
-}
+// Dropdown Option Change function
+function optionChanged(newIdNumber) {
+  buildDemographics(newIdNumber);
+};
 
 // Initialise dashboard
 init();
