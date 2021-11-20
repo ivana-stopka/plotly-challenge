@@ -2,7 +2,7 @@
 
 ## Summary
 
-This purpose of this project was to create an interactive dashboard using HTML and JavaScript to render the provided Belly Button Biodiversity dataset. The data can be filtered, by id, via the drop down menu and displayed in two charts: a bar plot and a bubble plot.
+This purpose of this project was to create an interactive dashboard using HTML and JavaScript to render the provided Belly Button Biodiversity dataset. The data can be filtered, by test subject id, via the drop down menu and displayed in two charts: a bar plot and a bubble plot.
 
 The raw data (samples.json) is contained in the 'data' directory.
 
